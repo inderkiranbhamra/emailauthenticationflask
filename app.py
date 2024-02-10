@@ -58,7 +58,7 @@ def send_email():
         email_tokens[email] = token
 
         # Construct authentication link with all required parameters
-        auth_link = generate_auth_link(token) + f'?username={username}&uid={uid}&team_name={team_name}'
+        auth_link = generate_auth_link(token, username, uid, team_name)
 
         subject = 'Authentication Link'
         body = f'Click on the following link to authenticate: {auth_link}'

@@ -34,7 +34,7 @@ def generate_token():
 
 # Function to generate an authentication link with token
 def generate_auth_link(token):
-    return f'http://localhost:5000/verify/{token}'
+    return f'https://emailauthenticationflask.vercel.app/verify/{token}'
 
 
 # Route to handle form submission and send authentication email

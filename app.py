@@ -36,10 +36,6 @@ def generate_token():
 def generate_auth_link(token):
     return f'http://localhost:5000/verify/{token}'
 
-@app.route('/')
-def start():
-    return "The app is running"
-
 
 # Route to handle form submission and send authentication email
 @app.route('/send_email', methods=['POST'])
@@ -99,7 +95,3 @@ def verify(token):
     else:
         return jsonify({'message': 'Invalid or expired verification link.'}), 400
 
-
-
-if __name__ == '__main__':
-    app.run(debug=True)

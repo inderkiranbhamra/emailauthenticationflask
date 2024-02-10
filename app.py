@@ -34,8 +34,10 @@ def generate_token():
 
 # Function to generate an authentication link with token
 def generate_auth_link(token):
-    return f'https://emailauthenticationflask.vercel.app/verify/{token}'
-
+    link = f'https://emailauthenticationflask.vercel.app/verify/{token}'
+    # Replace spaces with underscores
+    link = link.replace(' ', '_')
+    return link
 
 # Route to handle form submission and send authentication email
 @app.route('/send_email', methods=['POST'])

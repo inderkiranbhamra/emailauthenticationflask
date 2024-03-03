@@ -75,7 +75,7 @@ def generate_auth_link(token, team_name, college_name, leader_name, leader_ign, 
     return auth_link
 
 # Route to handle form submission and send authentication email
-@app.route('/send_email', methods=['POST'])
+@app.route('/bgmi', methods=['POST'])
 def send_email():
     if request.method == 'POST':
         team_name = request.form.get('team_name')
